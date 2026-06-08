@@ -1,0 +1,144 @@
+/* ══════════════════════════════════════
+   HERO — Floratech
+   Primário: bege | Secundário: verde
+══════════════════════════════════════ */
+
+.hero {
+    background: linear-gradient(135deg, var(--bege1) 0%, var(--bege2) 100%);
+    padding: 9rem 0 5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid var(--bege3);
+}
+
+/* Textura sutil dourada */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 15% 85%, rgba(184,168,50,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 85% 15%, rgba(107,143,62,0.06) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero__container {
+    width: 88%;
+    max-width: 70rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.6rem;
+    font-weight: 900;
+    color: var(--flora3);               /* título verde escuro */
+    margin-bottom: 2rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.hero__title em {
+    font-style: italic;
+    color: var(--dourado2);             /* itálico dourado */
+}
+
+.hero__texto {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--flora3);               /* texto verde escuro */
+    margin-bottom: 1.8rem;
+    text-align: justify;
+    line-height: 2.2rem;
+    opacity: 0.85;
+}
+
+.hero__btn {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    background-color: var(--flora2);    /* botão verde */
+    color: var(--cor-clara);
+    border-radius: 5rem;
+    border: 2px solid var(--flora3);
+    transition: all 0.3s ease;
+    letter-spacing: 0.05rem;
+    box-shadow: 0 4px 16px rgba(46,74,15,0.2);
+}
+
+.hero__btn:hover {
+    background-color: var(--flora3);
+    border-color: var(--flora3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(46,74,15,0.3);
+}
+
+.hero__imagem { display: none; }
+
+/* ── 768px+ ── */
+@media (min-width: 768px) {
+    .hero {
+        min-height: 45rem;
+        padding: 10rem 0 0;
+    }
+
+    .hero__container {
+        width: 50%;
+        max-width: none;
+        margin: 0 0 0 8%;
+        text-align: left;
+        padding-bottom: 5rem;
+    }
+
+    .hero__title {
+        font-size: 4.8rem;
+        text-align: left;
+        padding-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero__texto {
+        font-size: 1.8rem;
+        text-align: left;
+        line-height: 2.8rem;
+    }
+
+    .hero__btn {
+        margin-top: 1.5rem;
+        display: inline-block;
+    }
+
+    .hero__imagem {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: auto;
+        max-width: 40%;
+        object-fit: contain;
+        object-position: bottom right;
+        pointer-events: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero           { min-height: 55rem; }
+    .hero__title    { font-size: 6rem; }
+    .hero__texto    { font-size: 2rem; line-height: 3rem; }
+    .hero__btn      { font-size: 1.9rem; padding: 1.4rem 4rem; }
+}
+
+@media (min-width: 1440px) {
+    .hero           { min-height: 68rem; }
+    .hero__title    { font-size: 8rem; }
+    .hero__texto    { font-size: 2.4rem; line-height: 3.6rem; }
+    .hero__btn      { font-size: 2.2rem; padding: 1.6rem 5rem; }
+    .hero__imagem   { max-width: 38%; }
+}
