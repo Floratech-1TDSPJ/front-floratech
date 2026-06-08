@@ -1,0 +1,200 @@
+/* ══════════════════════════════════════
+   COMO FUNCIONA — Floratech
+══════════════════════════════════════ */
+
+.como { background-color: var(--bege1); width: 100%; }
+
+/* Passos */
+.como__passos {
+    padding: 4rem 1.5rem;
+    background-color: var(--bege2);
+}
+
+.como__passos-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--flora3);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.como__passo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2.5rem 2rem;
+    background: var(--bege1);
+    border-radius: 1.6rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 12px rgba(46,74,15,0.07);
+    border: 1px solid var(--bege3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.como__passo:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(46,74,15,0.14);
+}
+
+.como__passo-num {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--dourado1), var(--dourado2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    font-weight: 900;
+    color: var(--flora3);
+    box-shadow: 0 4px 16px rgba(184,168,50,0.3);
+}
+
+.como__passo-icone { font-size: 3.5rem; }
+
+.como__passo-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--flora3);
+    margin-bottom: 0.8rem;
+}
+
+.como__passo-texto {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.5rem;
+    color: var(--cor-texto);
+    line-height: 2.2rem;
+    text-align: justify;
+}
+
+.como__seta {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--dourado2);
+    margin: -0.5rem 0;
+}
+
+/* Diferenciais */
+.como__diferenciais {
+    padding: 4rem 1.5rem;
+    background-color: var(--bege1);
+}
+
+.como__diferenciais-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--flora3);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.como__diferenciais-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.como__diferencial {
+    background: var(--bege2);
+    border-radius: 1.4rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(46,74,15,0.07);
+    border: 1px solid var(--bege3);
+    border-left: 4px solid var(--flora1);
+    transition: transform 0.3s ease;
+}
+
+.como__diferencial:hover { transform: translateY(-3px); }
+
+.como__diferencial-icone { font-size: 3.5rem; display: block; margin-bottom: 1rem; }
+
+.como__diferencial-titulo {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--flora3);
+    margin-bottom: 0.8rem;
+}
+
+.como__diferencial-texto {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.4rem;
+    color: var(--cor-texto);
+    line-height: 2rem;
+}
+
+/* Fontes — único bloco verde escuro (destaque) */
+.como__fontes {
+    padding: 4rem 1.5rem;
+    background-color: var(--flora3);
+    text-align: center;
+}
+
+.como__fontes-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--dourado1);
+    margin-bottom: 1.5rem;
+}
+
+.como__fontes-texto {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 2.4rem;
+    max-width: 70rem;
+    margin: 0 auto 2rem;
+}
+
+.como__fontes-badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.como__fonte-badge {
+    background: rgba(184,168,50,0.15);
+    border: 1.5px solid var(--dourado1);
+    color: var(--dourado1);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 0.7rem 1.8rem;
+    border-radius: 5rem;
+}
+
+@media (min-width: 768px) {
+    .como__passos           { padding: 5rem 4rem; }
+    .como__passos-titulo    { font-size: 3rem; }
+    .como__passo            { flex-direction: row; text-align: left; }
+    .como__passo-texto      { text-align: left; }
+    .como__diferenciais     { padding: 5rem 4rem; }
+    .como__diferenciais-grid{ grid-template-columns: 1fr 1fr; }
+    .como__fontes           { padding: 5rem 4rem; }
+}
+
+@media (min-width: 1024px) {
+    .como__passos           { padding: 6rem 8rem; }
+    .como__diferenciais     { padding: 6rem 8rem; }
+    .como__diferenciais-grid{ grid-template-columns: repeat(3, 1fr); }
+    .como__fontes           { padding: 6rem 8rem; }
+}
+
+@media (min-width: 1440px) {
+    .como__passos           { padding: 7rem 15rem; }
+    .como__passos-titulo    { font-size: 3.6rem; }
+    .como__passo-titulo     { font-size: 2.4rem; }
+    .como__passo-texto      { font-size: 1.8rem; }
+    .como__diferenciais     { padding: 7rem 15rem; }
+    .como__fontes           { padding: 7rem 15rem; }
+}
