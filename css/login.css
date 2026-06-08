@@ -1,0 +1,148 @@
+/* ══════════════════════════════════════
+   LOGIN / CADASTRO — Floratech
+══════════════════════════════════════ */
+
+.login { width: 100%; }
+
+.login__section {
+    background-color: var(--bege1);
+    padding: 4rem 1.5rem;
+}
+
+.login__container {
+    background: var(--bege2);
+    border-radius: 2rem;
+    box-shadow: 0 6px 32px rgba(46,74,15,0.1);
+    padding: 3rem 2.5rem;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+    border: 1px solid var(--bege3);
+}
+
+.login__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--flora3);
+    margin-bottom: 2.5rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 0.2rem solid var(--dourado1);
+}
+
+.login__campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+}
+
+.login__label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--flora3);
+}
+
+.login__input {
+    width: 100%;
+    padding: 1.2rem 1.6rem;
+    font-size: 1.5rem;
+    font-family: 'Source Sans 3', sans-serif;
+    border: 0.2rem solid var(--bege3);
+    border-radius: 1rem;
+    outline: none;
+    background-color: var(--bege1);
+    color: var(--cor-texto);
+    transition: border-color 0.3s;
+}
+
+.login__input:focus {
+    border-color: var(--flora1);
+    background-color: #fff;
+}
+
+.login__btn {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    font-family: 'Source Sans 3', sans-serif;
+    background-color: var(--flora2);
+    color: var(--cor-clara);
+    border: 2px solid var(--flora3);
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 1rem;
+}
+
+.login__btn:hover {
+    background-color: var(--flora3);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46,74,15,0.25);
+}
+
+.login__cadastro {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--cor-texto);
+}
+
+.login__link {
+    font-weight: 700;
+    color: var(--flora2);
+    text-decoration: underline;
+}
+
+.login__link:hover { color: var(--flora3); }
+
+/* Modal */
+#meuModal {
+    border: none;
+    margin: 10rem auto;
+    border-radius: 2rem;
+    padding: 3rem;
+    max-width: 40rem;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 0 3rem rgba(0,0,0,0.2);
+    background: var(--bege2);
+}
+
+#meuModal::backdrop { background-color: rgba(0,0,0,0.45); }
+
+#btnFecharModal {
+    display: block;
+    margin-left: auto;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--cor-texto);
+}
+
+#btnFecharModal::before { content: "✕"; }
+
+#msgModal p {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.6rem;
+    color: var(--cor-texto);
+    margin-top: 1rem;
+    line-height: 2.4rem;
+}
+
+@media (min-width: 768px) {
+    .login__section    { padding: 5rem 3rem; }
+    .login__title      { font-size: 2.8rem; }
+    .login__input      { font-size: 1.6rem; }
+    .login__btn        { font-size: 1.9rem; }
+}
+
+@media (min-width: 1024px) {
+    .login__section    { padding: 6rem 5rem; }
+    .login__container  { padding: 4rem; }
+}
