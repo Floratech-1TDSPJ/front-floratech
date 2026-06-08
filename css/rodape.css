@@ -1,0 +1,80 @@
+/* ══════════════════════════════════════
+   RODAPÉ — Floratech
+   Bege primário, detalhes verdes
+══════════════════════════════════════ */
+
+.rodape {
+    background: linear-gradient(135deg, var(--bege2) 0%, var(--bege3) 100%);
+    padding: 3.5rem 0 2.5rem;
+    text-align: center;
+    border-top: 2px solid var(--bege3);
+}
+
+.rodape__container {
+    padding: 0 2rem;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.rodape__links {
+    display: flex;
+    justify-content: center;
+    gap: 1.4rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.rodape__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.9rem 2.2rem;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--flora3);                           /* texto verde escuro */
+    background-color: var(--bege3);                        /* bege escuro */   
+    border: 1.5px solid var(--flora1);              /* borda verde */
+    border-radius: 5rem;
+    transition: all 0.2s ease;
+    letter-spacing: 0.03rem;
+}
+
+.rodape__btn:hover {
+    background-color: var(--flora2);
+    border-color: var(--flora2);
+    color: var(--cor-clara);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(46,74,15,0.2);
+}
+
+.rodape__ico {
+    width: 1.4rem;
+    height: 1.4rem;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+}
+
+.rodape__divider {
+    width: 4rem;
+    height: 1px;
+    background: var(--flora1);
+    opacity: 0.3;
+    margin: 0 auto 1.5rem;
+}
+
+.rodape__texto {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--flora2);
+    letter-spacing: 0.05rem;
+    opacity: 0.8;
+}
+
+@media (min-width: 2560px) {
+    .rodape__btn  { font-size: 2.2rem; padding: 1.4rem 3.5rem; }
+    .rodape__ico  { width: 2rem; height: 2rem; }
+    .rodape__texto{ font-size: 2rem; }
+}
