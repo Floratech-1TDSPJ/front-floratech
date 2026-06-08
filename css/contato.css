@@ -1,0 +1,150 @@
+/* ══════════════════════════════════════
+   CONTATO — Floratech
+══════════════════════════════════════ */
+
+.contato__container {
+    padding: 3rem 1.5rem;
+    background-color: var(--bege1);
+}
+
+.contato__painel {
+    background: var(--bege2);
+    border-radius: 2.5rem;
+    box-shadow: 0 6px 32px rgba(46,74,15,0.1);
+    padding: 3rem 2rem;
+    border: 1px solid var(--bege3);
+}
+
+.contato__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--flora3);
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.contato__grupo { margin-bottom: 2rem; }
+
+.contato__label {
+    display: block;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--flora3);
+    margin-bottom: 0.6rem;
+}
+
+.contato__label--check {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.contato__checkbox {
+    width: 1.8rem;
+    height: 1.8rem;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+    cursor: pointer;
+    accent-color: var(--flora2);
+}
+
+.contato__input {
+    width: 100%;
+    padding: 1rem 1.4rem;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.5rem;
+    border: 0.2rem solid var(--bege3);
+    border-radius: 0.8rem;
+    background-color: var(--bege1);
+    color: var(--cor-texto);
+    transition: border-color 0.3s ease;
+}
+
+.contato__input:focus {
+    outline: none;
+    border-color: var(--flora1);
+    background-color: #fff;
+}
+
+.contato__input--erro { border-color: #c0392b; }
+.contato__select { cursor: pointer; }
+
+.contato__textarea {
+    height: 14rem;
+    resize: vertical;
+}
+
+.contato__erro {
+    display: block;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.3rem;
+    color: #c0392b;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    min-height: 1.6rem;
+}
+
+.contato__btn {
+    width: 100%;
+    padding: 1.2rem;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    background-color: var(--flora2);
+    color: var(--cor-clara);
+    border: 2px solid var(--flora3);
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.contato__btn:hover {
+    background-color: var(--flora3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(46,74,15,0.25);
+}
+
+.contato__sucesso {
+    display: none;
+    margin-top: 2rem;
+    padding: 1.5rem 2rem;
+    background-color: #d4edda;
+    border: 0.2rem solid var(--alerta-baixo);
+    border-radius: 1rem;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #1b5e20;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contato__container { padding: 3rem 4rem; }
+    .contato__painel    { padding: 4rem 5rem; }
+    .contato__title     { font-size: 3rem; }
+    .contato__label     { font-size: 1.7rem; }
+    .contato__input     { font-size: 1.7rem; padding: 1.2rem 1.8rem; }
+    .contato__btn       { font-size: 2rem; padding: 1.4rem; }
+}
+
+@media (min-width: 1024px) {
+    .contato__container { padding: 3rem 12rem; }
+    .contato__title     { font-size: 3.6rem; }
+    .contato__label     { font-size: 1.9rem; }
+    .contato__input     { font-size: 1.9rem; }
+}
+
+@media (min-width: 1440px) {
+    .contato__container { padding: 4rem 20rem; }
+    .contato__painel    { padding: 5rem 7rem; }
+    .contato__title     { font-size: 4.4rem; }
+    .contato__label     { font-size: 2.2rem; }
+    .contato__input     { font-size: 2.2rem; padding: 1.4rem 2rem; }
+    .contato__textarea  { height: 18rem; }
+    .contato__btn       { font-size: 2.4rem; padding: 1.6rem; }
+}
