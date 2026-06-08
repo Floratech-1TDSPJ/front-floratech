@@ -1,0 +1,167 @@
+/* ══════════════════════════════════════
+   SOBRE — Floratech
+══════════════════════════════════════ */
+
+.sobre__cards {
+    background-color: var(--bege1);
+    padding: 4rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.sobre__card {
+    background: var(--bege2);
+    border-radius: 1.6rem;
+    box-shadow: 0 4px 20px rgba(46,74,15,0.08);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border: 1px solid var(--bege3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sobre__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(46,74,15,0.14);
+}
+
+.sobre__card-emoji {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.sobre__card-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--flora3);
+    margin-bottom: 1rem;
+}
+
+.sobre__card-texto {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.5rem;
+    color: var(--cor-texto);
+    line-height: 2.2rem;
+}
+
+/* Seção tecnologias — único bloco com fundo verde (destaque) */
+.sobre__tecnologias {
+    background-color: var(--flora3);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.sobre__tecnologias-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--dourado1);
+    margin-bottom: 2.5rem;
+}
+
+.sobre__tecnologias-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.sobre__tech {
+    background-color: var(--flora1);
+    color: var(--cor-clara);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 0.8rem 2rem;
+    border-radius: 5rem;
+    border: 1px solid rgba(184,168,50,0.3);
+}
+
+/* Roadmap */
+.sobre__roadmap {
+    background-color: var(--bege2);
+    padding: 4rem 2rem;
+}
+
+.sobre__roadmap-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--flora3);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.sobre__roadmap-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.sobre__etapa {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    background: var(--bege1);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(46,74,15,0.07);
+    border: 1px solid var(--bege3);
+}
+
+.sobre__etapa-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--flora3);
+    background-color: var(--dourado1);
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.sobre__etapa-info h3 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--flora3);
+    margin-bottom: 0.5rem;
+}
+
+.sobre__etapa-info p {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.4rem;
+    color: var(--cor-texto);
+    line-height: 2rem;
+}
+
+@media (min-width: 768px) {
+    .sobre__cards          { grid-template-columns: 1fr 1fr; padding: 5rem 3rem; }
+    .sobre__card-titulo    { font-size: 2.2rem; }
+    .sobre__card-texto     { font-size: 1.7rem; }
+    .sobre__tecnologias-titulo { font-size: 2.8rem; }
+    .sobre__tech           { font-size: 1.6rem; }
+    .sobre__roadmap-titulo { font-size: 2.8rem; }
+}
+
+@media (min-width: 1024px) {
+    .sobre__cards          { grid-template-columns: repeat(4, 1fr); padding: 6rem 5rem; gap: 2.5rem; }
+    .sobre__tecnologias    { padding: 6rem 5rem; }
+    .sobre__roadmap        { padding: 6rem 5rem; }
+}
+
+@media (min-width: 1440px) {
+    .sobre__card-titulo    { font-size: 2.6rem; }
+    .sobre__card-texto     { font-size: 1.9rem; line-height: 2.8rem; }
+    .sobre__tech           { font-size: 1.8rem; padding: 1rem 2.5rem; }
+    .sobre__etapa-info h3  { font-size: 2rem; }
+    .sobre__etapa-info p   { font-size: 1.7rem; line-height: 2.6rem; }
+}
