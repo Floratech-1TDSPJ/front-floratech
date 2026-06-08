@@ -1,0 +1,67 @@
+/* Reset global */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+/* Importa fonte do Google — deve vir antes de tudo */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap');
+
+/* ══════════════════════════════════════
+   PALETA FLORATECH — Bege primário, Verde secundário
+   Inspiração: logo dourado sobre fundo creme
+══════════════════════════════════════ */
+:root {
+    /* Bege / creme — cor PRIMÁRIA (fundos, header, hero) */
+    --bege1: #f5f0e0;   /* creme claro (fundo principal) */
+    --bege2: #ede5c8;   /* creme médio */
+    --bege3: #d9cfa8;   /* creme escuro / painel */
+
+    /* Verde — cor SECUNDÁRIA (botões, destaques, texto importante) */
+    --flora1: #6b8f3e;   /* verde campo claro */
+    --flora2: #4a6b22;   /* verde campo médio */
+    --flora3: #2e4a0f;   /* verde campo escuro */
+
+    /* Dourado — logo e acentos */
+    --dourado1: #b8a832;
+    --dourado2: #9a8a1a;
+
+    /* Alertas */
+    --alerta-baixo: #4caf50;
+    --alerta-medio: #ff9800;
+    --alerta-alto:  #f44336;
+
+    /* Aliases semânticos */
+    --fundo-claro:  var(--bege1);
+    --fundo-medio:  var(--bege2);
+    --painel:       var(--bege3);
+    --painel-escuro:#c8bc98;
+
+    /* Texto */
+    --cor-clara:  #ffffff;
+    --cor-escura: #1a1a0e;
+    --cor-texto:  #2d2d1a;
+}
+
+/* Base de tipografia: 1rem = 10px */
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 2rem;
+    background-color: var(--bege1);
+    color: var(--cor-texto);
+    overflow-x: hidden;
+}
+
+main { width: 100%; }
+ul   { list-style: none; }
+a    { text-decoration: none; color: inherit; }
