@@ -1,0 +1,183 @@
+/* ══════════════════════════════════════
+   CABEÇALHO — Floratech
+   Primário: bege | Secundário: verde
+══════════════════════════════════════ */
+
+.cabecalho {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background: rgba(245, 240, 224, 0.97);   /* bege primário */
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 20px rgba(46,74,15,0.12);
+    border-bottom: 2px solid var(--bege3);
+}
+
+.cabecalho__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2rem;
+    max-width: 160rem;
+    margin: 0 auto;
+}
+
+/* Logo */
+.cabecalho__logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--dourado2);
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: color 0.2s;
+}
+
+.cabecalho__logo:hover { color: var(--flora2); }
+.cabecalho__logo-icon  { font-size: 2.4rem; }
+
+/* Hambúrguer */
+.cabecalho__hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 110;
+}
+
+.cabecalho__hamburger span {
+    display: block;
+    width: 2.8rem;
+    height: 0.3rem;
+    background-color: var(--flora2);    /* barras verdes */
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.cabecalho__hamburger.aberto span:nth-child(1) { transform: translateY(0.8rem) rotate(45deg); }
+.cabecalho__hamburger.aberto span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.cabecalho__hamburger.aberto span:nth-child(3) { transform: translateY(-0.8rem) rotate(-45deg); }
+
+/* Nav mobile: colapsa com transição */
+.cabecalho__nav {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(245, 240, 224, 0.99);  /* bege sólido no dropdown */
+    padding: 2rem;
+    border-top: 1px solid var(--bege3);
+    box-shadow: 0 8px 24px rgba(46,74,15,0.15);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height 0.35s ease, opacity 0.25s ease;
+}
+
+.cabecalho__nav.nav-aberta {
+    max-height: 60rem;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.cabecalho__ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.cabecalho__li { width: 100%; }
+
+/* Botões de navegação — texto escuro sobre bege, borda verde */
+.cabecalho__btn,
+.cabecalho__btn2 {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.6rem;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--flora3);               /* texto verde escuro */
+    border-radius: 6px;
+    border: 1.5px solid var(--bege3);
+    background-color: transparent;
+    transition: all 0.2s ease;
+    letter-spacing: 0.03rem;
+    text-align: left;
+}
+
+.cabecalho__btn:hover,
+.cabecalho__btn2:hover {
+    background-color: var(--flora2);    /* fundo verde no hover */
+    border-color: var(--flora2);
+    color: var(--cor-clara);
+}
+
+/* Item ativo: fundo verde sólido */
+.cabecalho__li--active .cabecalho__btn2 {
+    background-color: var(--flora2);
+    color: var(--cor-clara);
+    border-color: var(--flora2);
+}
+
+/* ── 768px+: menu horizontal ── */
+@media (min-width: 768px) {
+    .cabecalho__hamburger { display: none; }
+
+    .cabecalho__nav,
+    .cabecalho__nav.nav-aberta {
+        display: flex;
+        position: static;
+        background: transparent;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        max-height: none;
+        overflow: visible;
+        opacity: 1;
+        pointer-events: auto;
+        transition: none;
+    }
+
+    .cabecalho__ul {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        justify-content: flex-end;
+    }
+
+    .cabecalho__li { width: auto; }
+
+    .cabecalho__btn,
+    .cabecalho__btn2 {
+        width: auto;
+        padding: 0.6rem 1.4rem;
+        font-size: 1.3rem;
+        text-align: center;
+        white-space: nowrap;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cabecalho__container { padding: 1.4rem 4rem; }
+    .cabecalho__logo      { font-size: 2.4rem; }
+    .cabecalho__btn,
+    .cabecalho__btn2      { padding: 0.7rem 1.8rem; font-size: 1.5rem; }
+}
+
+@media (min-width: 1440px) {
+    .cabecalho__container { padding: 1.6rem 6rem; }
+    .cabecalho__btn,
+    .cabecalho__btn2      { padding: 0.8rem 2.2rem; font-size: 1.7rem; }
+}

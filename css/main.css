@@ -1,2 +1,4 @@
 /* main.css — Floratech — importa todos os módulos */
 
+@import url('./base.css');
+@import url('./cabecalho.css');
