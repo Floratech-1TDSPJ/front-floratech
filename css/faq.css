@@ -1,0 +1,100 @@
+/* ══════════════════════════════════════
+   FAQ — Floratech
+══════════════════════════════════════ */
+
+.faq { background-color: var(--bege1); }
+
+.faq__container {
+    padding: 3rem 1.5rem;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.faq__item {
+    background: var(--bege2);
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 12px rgba(46,74,15,0.07);
+    margin-bottom: 1.4rem;
+    overflow: hidden;
+    border: 1px solid var(--bege3);
+    transition: box-shadow 0.3s ease;
+}
+
+.faq__item:hover {
+    box-shadow: 0 6px 24px rgba(46,74,15,0.13);
+}
+
+.faq__pergunta {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 2rem;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--flora3);
+    text-align: left;
+    gap: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.faq__pergunta:hover {
+    background-color: var(--bege3);
+}
+
+/* Estado ativo: fundo verde, texto branco */
+.faq__pergunta--ativa {
+    background-color: var(--flora2);
+    color: var(--cor-clara);
+}
+
+.faq__icone {
+    font-size: 2.4rem;
+    font-weight: 400;
+    flex-shrink: 0;
+    line-height: 1;
+    color: var(--dourado2);
+}
+
+.faq__pergunta--ativa .faq__icone { color: var(--dourado1); }
+
+.faq__resposta {
+    display: none;
+    padding: 0 2rem 2rem;
+    background-color: var(--bege1);
+}
+
+.faq__resposta--aberta { display: block; }
+
+.faq__resposta p {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--cor-texto);
+    line-height: 2.4rem;
+    text-align: justify;
+    padding-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .faq__container { padding: 3rem 4rem; }
+    .faq__pergunta  { font-size: 1.9rem; padding: 2rem 2.5rem; }
+    .faq__resposta  { padding: 0 2.5rem 2rem; }
+    .faq__resposta p{ font-size: 1.7rem; line-height: 2.8rem; }
+}
+
+@media (min-width: 1024px) {
+    .faq__container { padding: 4rem 8rem; }
+    .faq__pergunta  { font-size: 2.2rem; }
+    .faq__resposta p{ font-size: 2rem; line-height: 3rem; }
+}
+
+@media (min-width: 1440px) {
+    .faq__container { padding: 5rem 15rem; }
+    .faq__pergunta  { font-size: 2.6rem; padding: 2.5rem 3rem; }
+    .faq__resposta p{ font-size: 2.2rem; line-height: 3.4rem; }
+}
