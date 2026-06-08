@@ -33,6 +33,59 @@ Este repositório contém o **front-end completo** da plataforma, desenvolvido c
 
 ---
 
+## 📁 Estrutura de Pastas
+
+```
+floratech/
+├── index.html                          ← Página inicial (Home)
+├── README.md
+│
+├── css/
+│   ├── main.css                        ← Importa todos os módulos CSS
+│   ├── base.css                        ← Reset, variáveis CSS e tipografia global
+│   ├── cabecalho.css                   ← Header + menu hambúrguer responsivo
+│   ├── hero.css                        ← Seção hero de cada página
+│   ├── rodape.css                      ← Rodapé global
+│   ├── info.css                        ← Cards informativos (grid)
+│   ├── integrantes.css                 ← Cards da equipe
+│   ├── faq.css                         ← Accordion de perguntas
+│   ├── contato.css                     ← Formulário de contato
+│   ├── login.css                       ← Login e cadastro
+│   ├── sobre.css                       ← Cards, tecnologias e roadmap
+│   ├── monitoramento.css               ← Painel de risco por estado
+│   └── como-funciona.css               ← Passos e diferenciais da solução
+│
+├── js/
+│   ├── menu.js                         ← Menu hambúrguer mobile
+│   ├── faq.js                          ← Accordion FAQ (abre um por vez)
+│   ├── contato.js                      ← Validação completa do formulário
+│   ├── login.js                        ← Autenticação simulada com modal
+│   ├── cadastro.js                     ← Validação de cadastro e senha
+│   └── monitoramento.js                ← Painel interativo de risco por estado
+│
+├── img/
+│   ├── FloraTech.ico                   ← Favicon
+│   ├── avatar/                         ← Fotos dos integrantes
+│   ├── hero/                           ← Imagens de destaque por página
+│   ├── icone/                          ← Ícones (GitHub, LinkedIn, INPE)
+│   └── info/                           ← Imagens das seções informativas
+│
+└── paginas/
+    ├── informacao/
+    │   ├── sobre.html                  ← Sobre a plataforma e o problema
+    │   ├── integrantes.html            ← Equipe com RMs e links
+    │   ├── faq.html                    ← Perguntas frequentes
+    │   └── contato.html                ← Formulário de contato
+    ├── login/
+    │   ├── login.html                  ← Tela de login
+    │   └── cadastro.html               ← Tela de cadastro
+    └── solucao/
+        ├── monitoramento.html          ← 🌟 Painel interativo por estado (solução principal)
+        └── como-funciona.html          ← Explicação da solução + diferenciais
+```
+
+---
+
 ## 📄 Páginas do Projeto
 
 | Página | Arquivo | Descrição |
