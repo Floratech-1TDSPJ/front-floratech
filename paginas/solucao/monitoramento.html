@@ -42,6 +42,136 @@
             </div>
             <img src="../../img/hero/hero-monitoramento.png" alt="Mapa de monitoramento" class="hero__imagem">
         </section>
+
+        <!-- Seção de seleção de estado -->
+        <div class="monitor__selecao">
+            <h2 class="monitor__titulo">Consulte o risco na sua região</h2>
+            <p class="monitor__subtitulo">Dados atualizados diariamente com base nos satélites do INPE</p>
+            <div class="monitor__form">
+                <select class="monitor__select" id="estadoSelect">
+                    <option value="">🗺️ Selecione um estado...</option>
+                    <option value="AC">Acre (AC)</option>
+                    <option value="AL">Alagoas (AL)</option>
+                    <option value="AP">Amapá (AP)</option>
+                    <option value="AM">Amazonas (AM)</option>
+                    <option value="BA">Bahia (BA)</option>
+                    <option value="CE">Ceará (CE)</option>
+                    <option value="DF">Distrito Federal (DF)</option>
+                    <option value="ES">Espírito Santo (ES)</option>
+                    <option value="GO">Goiás (GO)</option>
+                    <option value="MA">Maranhão (MA)</option>
+                    <option value="MT">Mato Grosso (MT)</option>
+                    <option value="MS">Mato Grosso do Sul (MS)</option>
+                    <option value="MG">Minas Gerais (MG)</option>
+                    <option value="PA">Pará (PA)</option>
+                    <option value="PB">Paraíba (PB)</option>
+                    <option value="PR">Paraná (PR)</option>
+                    <option value="PE">Pernambuco (PE)</option>
+                    <option value="PI">Piauí (PI)</option>
+                    <option value="RJ">Rio de Janeiro (RJ)</option>
+                    <option value="RN">Rio Grande do Norte (RN)</option>
+                    <option value="RS">Rio Grande do Sul (RS)</option>
+                    <option value="RO">Rondônia (RO)</option>
+                    <option value="RR">Roraima (RR)</option>
+                    <option value="SC">Santa Catarina (SC)</option>
+                    <option value="SP">São Paulo (SP)</option>
+                    <option value="SE">Sergipe (SE)</option>
+                    <option value="TO">Tocantins (TO)</option>
+                </select>
+                <button class="monitor__btn-buscar" onclick="buscarDados()">Ver painel →</button>
+            </div>
+        </div>
+
+        <!-- Painel de resultado (oculto até busca) -->
+        <div class="monitor__resultado" id="painelResultado">
+
+            <h2 class="monitor__estado-nome" id="resultEstadoNome">—</h2>
+
+            <!-- Score de risco -->
+            <div class="monitor__score" id="resultScore">
+                <span class="monitor__badge" id="resultBadge">—</span>
+                <span class="monitor__score-emoji" id="resultEmoji">—</span>
+                <p class="monitor__score-texto" id="resultDescricao">—</p>
+            </div>
+
+            <!-- Métricas em grid -->
+            <div class="monitor__metricas">
+                <div class="monitor__metrica">
+                    <span class="monitor__metrica-icone">🔥</span>
+                    <span class="monitor__metrica-valor" id="resultFocos">—</span>
+                    <span class="monitor__metrica-label">Focos ativos</span>
+                </div>
+                <div class="monitor__metrica">
+                    <span class="monitor__metrica-icone">☀️</span>
+                    <span class="monitor__metrica-valor" id="resultDias">—</span>
+                    <span class="monitor__metrica-label">Dias sem chuva</span>
+                </div>
+                <div class="monitor__metrica">
+                    <span class="monitor__metrica-icone">🌧️</span>
+                    <span class="monitor__metrica-valor" id="resultChuva">—</span>
+                    <span class="monitor__metrica-label">Precipitação</span>
+                </div>
+                <div class="monitor__metrica">
+                    <span class="monitor__metrica-icone">🌡️</span>
+                    <span class="monitor__metrica-valor" id="resultTemp">—</span>
+                    <span class="monitor__metrica-label">Temperatura</span>
+                </div>
+            </div>
+
+            <!-- Histórico -->
+            <div class="monitor__historico">
+                <h3 class="monitor__historico-titulo">📊 Histórico de focos — últimos 5 meses</h3>
+                <div id="resultHistorico">
+                    <!-- Preenchido via JS -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Tabela com todos os estados -->
+        <div class="monitor__tabela-secao">
+            <h2 class="monitor__tabela-titulo">Visão geral — todos os estados monitorados</h2>
+            <table class="monitor__tabela">
+                <thead>
+                    <tr>
+                        <th>Estado</th>
+                        <th>Focos (maio/26)</th>
+                        <th>Dias s/ chuva</th>
+                        <th>Precipitação</th>
+                        <th>Risco</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Mato Grosso (MT)</td><td>3.812</td><td>31 dias</td><td>4mm</td><td><span class="badge badge--alto">🔴 Alto</span></td></tr>
+                    <tr><td>Pará (PA)</td><td>2.654</td><td>28 dias</td><td>8mm</td><td><span class="badge badge--alto">🔴 Alto</span></td></tr>
+                    <tr><td>Rondônia (RO)</td><td>1.980</td><td>26 dias</td><td>6mm</td><td><span class="badge badge--alto">🔴 Alto</span></td></tr>
+                    <tr><td>Tocantins (TO)</td><td>1.650</td><td>24 dias</td><td>9mm</td><td><span class="badge badge--alto">🔴 Alto</span></td></tr>
+                    <tr><td>São Paulo (SP)</td><td>1.423</td><td>22 dias</td><td>12mm</td><td><span class="badge badge--alto">🔴 Alto</span></td></tr>
+                    <tr><td>Maranhão (MA)</td><td>1.210</td><td>20 dias</td><td>14mm</td><td><span class="badge badge--alto">🔴 Alto</span></td></tr>
+                    <tr><td>Minas Gerais (MG)</td><td>980</td><td>19 dias</td><td>16mm</td><td><span class="badge badge--alto">🔴 Alto</span></td></tr>
+                    <tr><td>Roraima (RR)</td><td>870</td><td>18 dias</td><td>11mm</td><td><span class="badge badge--alto">🔴 Alto</span></td></tr>
+                    <tr><td>Bahia (BA)</td><td>748</td><td>15 dias</td><td>28mm</td><td><span class="badge badge--medio">🟡 Médio</span></td></tr>
+                    <tr><td>Goiás (GO)</td><td>632</td><td>18 dias</td><td>21mm</td><td><span class="badge badge--medio">🟡 Médio</span></td></tr>
+                    <tr><td>Piauí (PI)</td><td>580</td><td>16 dias</td><td>24mm</td><td><span class="badge badge--medio">🟡 Médio</span></td></tr>
+                    <tr><td>Mato Grosso do Sul (MS)</td><td>520</td><td>14 dias</td><td>26mm</td><td><span class="badge badge--medio">🟡 Médio</span></td></tr>
+                    <tr><td>Amazonas (AM)</td><td>420</td><td>12 dias</td><td>42mm</td><td><span class="badge badge--medio">🟡 Médio</span></td></tr>
+                    <tr><td>Amapá (AP)</td><td>390</td><td>13 dias</td><td>38mm</td><td><span class="badge badge--medio">🟡 Médio</span></td></tr>
+                    <tr><td>Ceará (CE)</td><td>340</td><td>11 dias</td><td>32mm</td><td><span class="badge badge--medio">🟡 Médio</span></td></tr>
+                    <tr><td>Acre (AC)</td><td>310</td><td>10 dias</td><td>45mm</td><td><span class="badge badge--medio">🟡 Médio</span></td></tr>
+                    <tr><td>Pernambuco (PE)</td><td>280</td><td>9 dias</td><td>36mm</td><td><span class="badge badge--medio">🟡 Médio</span></td></tr>
+                    <tr><td>Paraná (PR)</td><td>210</td><td>8 dias</td><td>48mm</td><td><span class="badge badge--medio">🟡 Médio</span></td></tr>
+                    <tr><td>Distrito Federal (DF)</td><td>180</td><td>17 dias</td><td>18mm</td><td><span class="badge badge--medio">🟡 Médio</span></td></tr>
+                    <tr><td>Rio Grande do Norte (RN)</td><td>142</td><td>7 dias</td><td>44mm</td><td><span class="badge badge--baixo">🟢 Baixo</span></td></tr>
+                    <tr><td>Paraíba (PB)</td><td>118</td><td>6 dias</td><td>52mm</td><td><span class="badge badge--baixo">🟢 Baixo</span></td></tr>
+                    <tr><td>Alagoas (AL)</td><td>95</td><td>5 dias</td><td>60mm</td><td><span class="badge badge--baixo">🟢 Baixo</span></td></tr>
+                    <tr><td>Sergipe (SE)</td><td>82</td><td>5 dias</td><td>58mm</td><td><span class="badge badge--baixo">🟢 Baixo</span></td></tr>
+                    <tr><td>Espírito Santo (ES)</td><td>74</td><td>4 dias</td><td>65mm</td><td><span class="badge badge--baixo">🟢 Baixo</span></td></tr>
+                    <tr><td>Rio de Janeiro (RJ)</td><td>61</td><td>4 dias</td><td>70mm</td><td><span class="badge badge--baixo">🟢 Baixo</span></td></tr>
+                    <tr><td>Rio Grande do Sul (RS)</td><td>48</td><td>4 dias</td><td>85mm</td><td><span class="badge badge--baixo">🟢 Baixo</span></td></tr>
+                    <tr><td>Santa Catarina (SC)</td><td>32</td><td>6 dias</td><td>72mm</td><td><span class="badge badge--baixo">🟢 Baixo</span></td></tr>
+                </tbody>
+            </table>
+        </div>
         
     </main>
 
