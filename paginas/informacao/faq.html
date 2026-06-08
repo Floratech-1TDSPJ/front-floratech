@@ -32,6 +32,113 @@
         </div>
     </header>
 
+    <main class="faq">
+
+        <section class="hero">
+            <div class="hero__container">
+                <h1 class="hero__title">Perguntas <em>Frequentes</em></h1>
+                <p class="hero__texto">Tire suas dúvidas sobre a Floratech. Não encontrou o que procura? Fale com a gente.</p>
+                <a href="contato.html" class="hero__btn">Fale conosco</a>
+            </div>
+            <img src="../../img/hero/hero-faq.png" alt="Produtor consultando o painel" class="hero__imagem">
+        </section>
+
+        <div class="faq__container">
+
+            <div class="faq__item">
+                <button class="faq__pergunta" onclick="toggleFaq(this)">
+                    O que é a Floratech?
+                    <span class="faq__icone">+</span>
+                </button>
+                <div class="faq__resposta">
+                    <p>A Floratech é uma plataforma gratuita de monitoramento climático para produtores rurais brasileiros. Ela transforma dados reais de satélites do INPE em alertas simples de risco de queimadas — classificados como Baixo, Médio ou Alto — por estado.</p>
+                </div>
+            </div>
+
+            <div class="faq__item">
+                <button class="faq__pergunta" onclick="toggleFaq(this)">
+                    De onde vêm os dados exibidos?
+                    <span class="faq__icone">+</span>
+                </button>
+                <div class="faq__resposta">
+                    <p>Todos os dados da Floratech são originados do INPE (Instituto Nacional de Pesquisas Espaciais), que monitora focos de calor, precipitação e condições climáticas em todo o Brasil por meio de satélites. As informações são públicas, oficiais e atualizadas diariamente.</p>
+                </div>
+            </div>
+
+            <div class="faq__item">
+                <button class="faq__pergunta" onclick="toggleFaq(this)">
+                    Como funciona o score de risco?
+                    <span class="faq__icone">+</span>
+                </button>
+                <div class="faq__resposta">
+                    <p>O score é calculado com base em três variáveis principais: número de focos de incêndio registrados, dias consecutivos sem chuva e volume de precipitação acumulada. O resultado é classificado em três níveis: 🟢 Baixo (situação estável), 🟡 Médio (atenção recomendada) e 🔴 Alto (risco elevado, medidas preventivas urgentes).</p>
+                </div>
+            </div>
+
+            <div class="faq__item">
+                <button class="faq__pergunta" onclick="toggleFaq(this)">
+                    Preciso pagar para usar a Floratech?
+                    <span class="faq__icone">+</span>
+                </button>
+                <div class="faq__resposta">
+                    <p>Não. A Floratech é completamente gratuita. Nossa missão é democratizar o acesso à informação climática para pequenos e médios produtores rurais que historicamente não têm acesso a sistemas profissionais de monitoramento.</p>
+                </div>
+            </div>
+
+            <div class="faq__item">
+                <button class="faq__pergunta" onclick="toggleFaq(this)">
+                    Preciso instalar algum aplicativo?
+                    <span class="faq__icone">+</span>
+                </button>
+                <div class="faq__resposta">
+                    <p>Não. A Floratech funciona diretamente no navegador, em qualquer dispositivo — celular, tablet ou computador. Basta acessar o site, selecionar seu estado e ver os dados instantaneamente. Nenhuma instalação é necessária.</p>
+                </div>
+            </div>
+
+            <div class="faq__item">
+                <button class="faq__pergunta" onclick="toggleFaq(this)">
+                    Com que frequência os dados são atualizados?
+                    <span class="faq__icone">+</span>
+                </button>
+                <div class="faq__resposta">
+                    <p>Os dados do INPE são atualizados diariamente. O painel da Floratech reflete as informações mais recentes disponíveis, geralmente referentes ao dia anterior. Em situações críticas de alto risco, o sistema pode exibir atualizações em tempo quase real.</p>
+                </div>
+            </div>
+
+            <div class="faq__item">
+                <button class="faq__pergunta" onclick="toggleFaq(this)">
+                    Para quais estados a Floratech está disponível?
+                    <span class="faq__icone">+</span>
+                </button>
+                <div class="faq__resposta">
+                    <p>Atualmente o painel de monitoramento cobre os principais estados produtores: São Paulo, Mato Grosso, Pará, Bahia, Goiás, Amazonas, Santa Catarina e Rio Grande do Sul. Estamos ampliando a cobertura para todos os 26 estados e o Distrito Federal ao longo de 2026.</p>
+                </div>
+            </div>
+
+            <div class="faq__item">
+                <button class="faq__pergunta" onclick="toggleFaq(this)">
+                    O que devo fazer ao receber um alerta de risco Alto?
+                    <span class="faq__icone">+</span>
+                </button>
+                <div class="faq__resposta">
+                    <p>Em caso de risco Alto: evite qualquer prática de queima controlada, mantenha aceiros limpos ao redor da propriedade, tenha acesso rápido a água, informe vizinhos e, se necessário, acione o Corpo de Bombeiros ou a Defesa Civil local. Monitoramento constante é fundamental.</p>
+                </div>
+            </div>
+
+            <div class="faq__item">
+                <button class="faq__pergunta" onclick="toggleFaq(this)">
+                    Meus dados pessoais estão seguros?
+                    <span class="faq__icone">+</span>
+                </button>
+                <div class="faq__resposta">
+                    <p>Sim. A Floratech segue as diretrizes da LGPD (Lei Geral de Proteção de Dados). Os dados fornecidos no cadastro são utilizados exclusivamente para personalizar alertas e não são compartilhados com terceiros. O painel público de monitoramento não exige cadastro ou login.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    
     <footer class="rodape">
         <div class="rodape__container">
             <div class="rodape__links">
@@ -46,6 +153,6 @@
             <p class="rodape__texto">Floratech · Todos os direitos reservados · &copy; · 2026 · FIAP 1TDSPJ</p>
         </div>
     </footer>
-    
+
 </body>
 </html>
