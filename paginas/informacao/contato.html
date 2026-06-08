@@ -31,6 +31,73 @@
         </div>
     </header>
 
+    <main class="info">
+
+        <section class="hero">
+            <div class="hero__container">
+                <h1 class="hero__title">Entre em <em>contato</em></h1>
+                <p class="hero__texto">Dúvida sobre o painel, sugestão de melhoria ou proposta de parceria? Nossa equipe responde em até 2 dias úteis.</p>
+                <p class="hero__texto">Nenhuma mensagem cai no vazio por aqui.</p>
+            </div>
+            <img src="../../img/hero/hero-contato.png" alt="Produtor com celular no campo" class="hero__imagem">
+        </section>
+
+        <div class="contato__container">
+            <div class="contato__painel">
+
+                <h2 class="contato__title">Mande sua mensagem</h2>
+
+                <div class="contato__grupo">
+                    <label class="contato__label" for="nome">Nome completo *</label>
+                    <input class="contato__input" type="text" id="nome" placeholder="Seu nome completo">
+                    <span class="contato__erro" id="erro-nome"></span>
+                </div>
+
+                <div class="contato__grupo">
+                    <label class="contato__label" for="email">E-mail *</label>
+                    <input class="contato__input" type="email" id="email" placeholder="seu@email.com">
+                    <span class="contato__erro" id="erro-email"></span>
+                </div>
+
+                <div class="contato__grupo">
+                    <label class="contato__label" for="assunto">Assunto *</label>
+                    <select class="contato__input contato__select" id="assunto">
+                        <option value="">Selecione um assunto</option>
+                        <option value="duvida">Dúvida sobre o painel de monitoramento</option>
+                        <option value="dado">Dado incorreto ou desatualizado</option>
+                        <option value="estado">Solicitar cobertura de novo estado</option>
+                        <option value="parceria">Proposta de parceria institucional</option>
+                        <option value="imprensa">Imprensa / mídia</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                    <span class="contato__erro" id="erro-assunto"></span>
+                </div>
+
+                <div class="contato__grupo">
+                    <label class="contato__label" for="mensagem">Mensagem *</label>
+                    <textarea class="contato__input contato__textarea" id="mensagem" placeholder="Escreva sua mensagem aqui..."></textarea>
+                    <span class="contato__erro" id="erro-mensagem"></span>
+                </div>
+
+                <div class="contato__grupo">
+                    <label class="contato__label contato__label--check">
+                        <input type="checkbox" id="termos" class="contato__checkbox">
+                        Li e concordo com os termos de uso e política de privacidade da Floratech *
+                    </label>
+                    <span class="contato__erro" id="erro-termos"></span>
+                </div>
+
+                <button class="contato__btn" onclick="enviarFormulario()">Enviar mensagem</button>
+
+                <div class="contato__sucesso" id="mensagem-sucesso">
+                    ✅ Mensagem enviada! Responderemos em até 2 dias úteis.
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+    
     <footer class="rodape">
         <div class="rodape__container">
             <div class="rodape__links">
@@ -45,6 +112,6 @@
             <p class="rodape__texto">Floratech · Todos os direitos reservados · &copy; · 2026 · FIAP 1TDSPJ</p>
         </div>
     </footer>
-    
+
 </body>
 </html>
