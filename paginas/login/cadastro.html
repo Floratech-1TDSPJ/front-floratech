@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="icon" href="../../img/FloraTech.ico" type="image/ico">
+    <script src="../../js/menu.js" defer></script>
+    <script src="../../js/cadastro.js" defer></script>
+    <title>Floratech — Cadastro</title>
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="cabecalho__container">
+            <a class="cabecalho__logo" href="../../index.html">
+                <span class="cabecalho__logo-icon">🌿</span> Floratech
+            </a>
+            <button class="cabecalho__hamburger" id="btnHamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuNav">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="cabecalho__nav" id="menuNav">
+                <ul class="cabecalho__ul">
+                    <li class="cabecalho__li"><a class="cabecalho__btn" href="../informacao/sobre.html">Sobre</a></li>
+                    <li class="cabecalho__li"><a class="cabecalho__btn" href="../informacao/integrantes.html">Integrantes</a></li>
+                    <li class="cabecalho__li"><a class="cabecalho__btn" href="../informacao/faq.html">FAQ</a></li>
+                    <li class="cabecalho__li"><a class="cabecalho__btn" href="../informacao/contato.html">Contato</a></li>
+                    <li class="cabecalho__li"><a class="cabecalho__btn" href="../solucao/monitoramento.html">Monitoramento</a></li>
+                    <li class="cabecalho__li"><a class="cabecalho__btn" href="./login.html">Entrar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="login">
+
+        <!-- Modal de feedback -->
+        <dialog id="meuModal">
+            <button id="btnFecharModal" aria-label="Fechar janela"></button>
+            <div id="msgModal">
+                <p>mensagem aqui</p>
+            </div>
+        </dialog>
+
+        <section class="hero">
+            <div class="hero__container">
+                <h1 class="hero__title">Crie sua<br><em>conta</em></h1>
+                <p class="hero__texto">Cadastre-se gratuitamente e receba alertas personalizados de risco climático para sua região.</p>
+            </div>
+            <img src="../../img/hero/hero-cadastro.png" alt="Cadastro Floratech" class="hero__imagem">
+        </section>
+
+        <section class="login__section">
+            <div class="login__container">
+
+                <h2 class="login__title">Cadastro</h2>
+
+                <form id="formCadastro">
+                    <div class="login__campo">
+                        <label class="login__label" for="idNome">Nome completo</label>
+                        <input
+                            class="login__input"
+                            type="text"
+                            id="idNome"
+                            name="nome"
+                            placeholder="Seu nome completo"
+                            minlength="3"
+                            maxlength="100"
+                            required
+                        >
+                    </div>
+                    <div class="login__campo">
+                        <label class="login__label" for="idEmail">E-mail</label>
+                        <input
+                            class="login__input"
+                            type="email"
+                            id="idEmail"
+                            name="email"
+                            placeholder="seuemail@exemplo.com"
+                            minlength="7"
+                            maxlength="150"
+                            required
+                        >
+                    </div>
+                    <div class="login__campo">
+                        <label class="login__label" for="idSenha">Senha</label>
+                        <input
+                            class="login__input"
+                            type="password"
+                            id="idSenha"
+                            name="senha"
+                            placeholder="Mínimo 5 caracteres"
+                            minlength="5"
+                            maxlength="30"
+                            required
+                        >
+                    </div>
+                    <div class="login__campo">
+                        <label class="login__label" for="idConfirmarSenha">Confirmar senha</label>
+                        <input
+                            class="login__input"
+                            type="password"
+                            id="idConfirmarSenha"
+                            name="confirmarSenha"
+                            placeholder="Digite a senha novamente"
+                            minlength="5"
+                            maxlength="30"
+                            required
+                        >
+                    </div>
+                    <button class="login__btn" type="submit" id="btnCadastrar">Cadastrar</button>
+                </form>
+
+                <p class="login__cadastro">
+                    Já tem uma conta?
+                    <a class="login__link" href="./login.html">Entrar</a>
+                </p>
+
+            </div>
+        </section>
+    
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape__container">
+            <div class="rodape__links">
+                <a class="rodape__btn" href="https://github.com/FloraTech-1TDSPJ" target="_blank">
+                    <img src="../../img/icone/github.png" alt="" class="rodape__ico"> GitHub
+                </a>
+                <a class="rodape__btn" href="https://queimadas.dgi.inpe.br" target="_blank">
+                    <img src="../../img/icone/inpe.png" alt="" class="rodape__ico"> INPE
+                </a>
+            </div>
+            <div class="rodape__divider"></div>
+            <p class="rodape__texto">Floratech · Todos os direitos reservados · &copy; · 2026 · FIAP 1TDSPJ</p>
+        </div>
+    </footer>
+
+</body>
+</html>
