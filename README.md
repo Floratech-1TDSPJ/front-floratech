@@ -229,7 +229,7 @@ Não há dependências ou build necessários. Basta abrir o projeto localmente:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/FloraTech-1TDSPJ/floratech_front.git
+git clone https://github.com/Floratech-1TDSPJ/front-floratech.git
 
 # Navegue até a pasta
 cd front-floratech/
